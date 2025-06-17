@@ -1,0 +1,4 @@
+mongodb+srv://shriyanshthakur12:bqAJdqbPw1mziyuv@cluster0.bjhqu42.mongodb.net/
+
+username - shriyanshthakur12
+pass - bqAJdqbPw1mziyuv
