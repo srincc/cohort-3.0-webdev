@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="buttonParent">
+  </div>
+
+  <script>
+    // state
+    let state = {
+      count: 0
+    }
+
+    // component
+    function buttonComponent(count) {
+      const button = document.createElement("button");
+      button.innerHTML = `Counter ${count}`;
+      button.setAttribute("onclick", `onButtonPress()`);
+      return button;
+    }
+    function onButtonPress() {
+      state.count++;
+      buttonComponentReRender();
+    }
+
+    // handled by react library
+    function buttonComponentReRender() {
+      document.getElementById("buttonParent").innerHTML = "";
+      const component = buttonComponent(state.count);
+      document.getElementById("buttonParent").appendChild(component);
+    }
+
+    buttonComponentReRender();
+  </script>
+</body>
+
+</html>
